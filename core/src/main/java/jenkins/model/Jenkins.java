@@ -1546,6 +1546,7 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
 
     protected void updateComputerList() {
         updateComputerList(AUTOMATIC_SLAVE_LAUNCH);
+        getQueue().updateNodeConsistentHash();
     }
 
     /** @deprecated Use {@link SCMListener#all} instead. */
